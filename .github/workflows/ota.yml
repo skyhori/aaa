@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: build C
-        run: gcc main.c
+        run: pwd
 
   job2:
     runs-on: self-hosted
