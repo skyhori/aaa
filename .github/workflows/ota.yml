@@ -19,7 +19,7 @@ jobs:
       - name: artifactUpload
         uses: actions/upload-artifact@v4
         with:
-          name: build-files
+          name: a.out
           path: build
 
   job2:
@@ -28,5 +28,5 @@ jobs:
       - name: Download build files
         uses: actions/download-artifact@v4
         with:
-          name: build-files
+          name: a.out
           path: build
