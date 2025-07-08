@@ -16,6 +16,11 @@ jobs:
           cd src
           gcc main.c
           ls
+      - name: artifactUpload
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-files
+          path: build
 
   job2:
     runs-on: self-hosted
