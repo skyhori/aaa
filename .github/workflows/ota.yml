@@ -19,8 +19,8 @@ jobs:
       - name: artifactUpload
         uses: actions/upload-artifact@v4
         with:
-          name: a.out
-          path: build
+          name: upload
+          path: src/a.out
 
   job2:
     runs-on: self-hosted
@@ -28,5 +28,5 @@ jobs:
       - name: Download build files
         uses: actions/download-artifact@v4
         with:
-          name: a.out
+          name: download
           path: build
