@@ -23,7 +23,7 @@ jobs:
           path: src/a.out
 
   job2:
-    runs-on: self-hosted
+    runs-on: [self-hosted, Windows, X64]
     steps:
       - name: Download build files
         uses: actions/download-artifact@v4
@@ -32,7 +32,7 @@ jobs:
           path: build
 
   job3:
-    runs-on: [self-hosted, S59047678]
+    runs-on: [self-hosted, Windows, X64, label-1]
     steps:
       - name: Download build files
         uses: actions/download-artifact@v4
