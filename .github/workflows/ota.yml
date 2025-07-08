@@ -13,8 +13,8 @@ jobs:
 
       - name: build C
         run: |
-          pwd
-          ls
+          cd src
+          gcc main.c
 
   job2:
     runs-on: self-hosted
