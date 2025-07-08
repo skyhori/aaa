@@ -6,21 +6,19 @@ on:
 
 jobs:
   job1:
-    build:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout repository
-          uses: actions/checkout@v4
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-        - name: build C
-          run: gcc main.c
+      - name: build C
+        run: gcc main.c
 
   job2:
-    self:
-      runs-on: self-hosted
-      steps:
-        - name: Download build files
-          uses: actions/download-artifact@v3
-          with:
-            name: build-files
-            path: build
+    runs-on: self-hosted
+    steps:
+      - name: Download build files
+        uses: actions/download-artifact@v3
+        with:
+          name: build-files
+          path: build
