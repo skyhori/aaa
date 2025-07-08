@@ -1,0 +1,25 @@
+name: otameshi
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: build C
+        run: gcc main.c
+
+jobs:
+  self:
+    runs-on: self-hosted
+    steps:
+      - name: Download build files
+        uses: actions/download-artifact@v3
+        with:
+          name: build-files
+          path: build
