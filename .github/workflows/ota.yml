@@ -39,3 +39,6 @@ jobs:
         with:
           name: cupload
           path: build
+      - name: dirCommand
+        run: |
+          dir
