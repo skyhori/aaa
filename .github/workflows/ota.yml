@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Command実行
         run: |
-          dir
+          echo "Hello, world!"
