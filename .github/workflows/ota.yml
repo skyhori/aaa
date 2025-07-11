@@ -12,3 +12,4 @@ jobs:
         run: |
           cp ..\..\..\Shell\a.ps1 .
           ./a.ps1
+          echo "Hello World"
