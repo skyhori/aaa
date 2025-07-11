@@ -16,7 +16,7 @@ jobs:
       - name: Docker build実行
         run: |
           cd Docker
-          build -t otameshi:1.0 .
+          docker build -t otameshi:1.0 .
       - name: Docker run実行
         run: |
           docker run --name ota otameshi:1.0
