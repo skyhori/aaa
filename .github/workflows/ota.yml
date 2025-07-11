@@ -18,9 +18,12 @@ jobs:
           cd Docker
           build --platform linux/amd64/v3 -t otameshi:1.0 .
       - name: Docker run実行
+        run: |
           docker run --name ota otameshi:1.0
       - name: 成果物コピー
+        run: |
           docker cp ota:./a.out .
       - name: コンテナイメージ削除
+        run: |
           docker rm ota
           docker rmi otameshi:1.0
