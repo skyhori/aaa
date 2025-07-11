@@ -19,6 +19,7 @@ jobs:
       - name: Docker build実行
         run: |
           cd Docker
+          chmod +x aaa.sh
           docker build -t otameshi:1.0 .
       - name: Docker run実行
         run: |
