@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Dockerコンテキスト内にビルド対象物を格納
+        run: |
+          cp -r src ./Docker
 
       - name: Docker build setup
         uses: docker/setup-buildx-action@v3

@@ -7,6 +7,6 @@ RUN apt-get update -y && apt-get upgrade -y && apt-get autoremove -y && apt-get 
 RUN apt-get install -y git 
 
 COPY aaa.sh .
-COPY ./../src/main.c .
+COPY ./src/main.c .
 
 ENTRYPOINT ["./aaa.sh"]
