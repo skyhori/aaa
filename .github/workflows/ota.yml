@@ -39,6 +39,7 @@ jobs:
           
   job2:
     runs-on: [self-hosted, Windows, X64, label-1]
+    needs: job1
     steps:
       - name: Download build files
         uses: actions/download-artifact@v4
