@@ -11,8 +11,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Docker build
+      - name: Docker build setup
         uses: docker/setup-buildx-action@v3
+      - name: Docker build run
         run: |
           cd Docker
           build --platform linux/amd64/v3 -t otameshi:1.0 .
