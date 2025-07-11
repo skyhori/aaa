@@ -13,11 +13,14 @@ jobs:
 
       - name: Docker build setup
         uses: docker/setup-buildx-action@v3
-      - name: Docker build run
+      - name: Docker build実行
         run: |
           cd Docker
           build --platform linux/amd64/v3 -t otameshi:1.0 .
+      - name: Docker run実行
           docker run --name ota otameshi:1.0
+      - name: 成果物コピー
           docker cp ota:./a.out .
+      - name: コンテナイメージ削除
           docker rm ota
           docker rmi otameshi:1.0
