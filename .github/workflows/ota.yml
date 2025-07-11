@@ -10,5 +10,5 @@ jobs:
     steps:
       - name: Command実行
         run: |
-          dir
-          cd
+          cp ..\..\..\Shell\a.ps1 .
+          ./a.ps1
