@@ -6,53 +6,9 @@ on:
 
 jobs:
   job1:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Dockerコンテキスト内にビルド対象物を格納
-        run: |
-          cp -r src ./Docker
-
-      - name: Docker build setup
-        uses: docker/setup-buildx-action@v3
-      - name: Docker build実行
-        run: |
-          cd Docker
-          chmod +x aaa.sh
-          docker build -t otameshi:1.0 .
-      - name: Docker run実行
-        run: |
-          docker run --name ota otameshi:1.0
-      - name: 成果物コピー
-        run: |
-          docker cp ota:./a.out .
-      - name: コンテナイメージ削除
-        run: |
-          docker rm ota
-          docker rmi otameshi:1.0
-      - name: artifactUpload
-        uses: actions/upload-artifact@v4
-        with:
-          name: cupload
-          path: ./a.out
-          
-  job2:
     runs-on: [self-hosted, Windows, X64, label-1]
-    needs: job1
     steps:
-      - name: Download build files
-        uses: actions/download-artifact@v4
-        with:
-          name: cupload
-          path: build
-
-  job3:
-    runs-on: [self-hosted, Windows, X64, label-3]
-    needs: job1
-    steps:
-      - name: Download build files
-        uses: actions/download-artifact@v4
-        with:
-          name: cupload
-          path: build
+      - name: Command実行
+        run: |
+          C:\ps1\b.ps1
+          echo "Hello World!!!!!!!"
