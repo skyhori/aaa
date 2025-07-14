@@ -47,7 +47,7 @@ jobs:
           name: cupload
           path: build
 
-  job2:
+  job3:
     runs-on: [self-hosted, Windows, X64, label-3]
     needs: job1
     steps:
