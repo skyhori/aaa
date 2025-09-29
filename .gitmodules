@@ -1,0 +1,6 @@
+[submodule "sub/sub"]
+	path = sub/sub
+	url = https://github.com/skyhori/subm.git
+[submodule "Sub/su"]
+	path = Sub/su
+	url = https://github.com/skyhori/subm.git

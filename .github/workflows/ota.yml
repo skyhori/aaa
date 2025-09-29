@@ -10,5 +10,6 @@ jobs:
     steps:
       - name: Command実行
         run: |
-          C:\ps1\b.ps1
+          cd C:\next-fr
+          python .\auto_test_driver.py -e 2
           echo "Hello World!!!!!!!"
