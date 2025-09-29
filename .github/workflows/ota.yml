@@ -11,5 +11,5 @@ jobs:
       - name: Command実行
         run: |
           cd C:\next-fr
-          python .\auto_test_driver.py -e 2
+          py .\auto_test_driver.py -e 2
           echo "Hello World!"
