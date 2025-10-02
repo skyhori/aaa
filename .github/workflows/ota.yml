@@ -1,12 +1,11 @@
 name: otameshi
 
 on:
-  push:
-    branches: ["main"]
+  workflow_dispatch:
 
 jobs:
   job1:
-    runs-on: [self-hosted, Windows, X64, label-1]
+    runs-on: [self-hosted, Windows, X64, label-99]
     steps:
       - name: Command実行
         run: |
