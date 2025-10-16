@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Command実行
         run: |
-          $PSDefaultParameterValues['*:Encoding'] = 'sjis'
+          $OutputEncoding = [System.Text.Encoding]::SJIS
           echo "あいうえおかきくけこ"
 #        run: |
 #          cd C:\next-fr
