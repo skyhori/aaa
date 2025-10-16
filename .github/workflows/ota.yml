@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Command実行
         run: |
-          cd C:\next-fr
-          py .\auto_test_driver.py -e 2
-          echo "Hello World!"
+          echo "あいうえおかきくけこ"
+#        run: |
+#          cd C:\next-fr
+#          py .\auto_test_driver.py -e 2
+#          echo "Hello World!"
